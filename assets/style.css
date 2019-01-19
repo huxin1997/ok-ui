@@ -1,0 +1,86 @@
+
+
+body{
+  padding-top: 50px;
+  text-align: center;
+  color: #606266;
+  margin: 0;
+  font-size: 14px;
+}
+
+
+.btn{
+  padding: 10px;
+  min-width: 80px;
+  border-radius: 8px;
+  border:none;
+  background: #fff;
+  border:1px solid #ddd;
+  box-shadow: 2px 3px 5px #00000014;
+  margin: 0 4px;
+  transition: all .5s;
+}
+.btn:focus{
+  border-color: #03A9F4;
+  color:#03A9F4;
+  animation: myfirst .1s;
+  animation-iteration-count:5; 
+}
+.btn-primary {
+  color:#03A9F4;
+  border:1px solid #03A9F4;
+}
+.btn-primary:focus {
+  background: #03A9F4; 
+  border-color: #03A9F4;
+  color:#fff;
+}
+.btn-success {
+  color:#5daf34;
+  border:1px solid #5daf34;
+}
+.btn-success:focus {
+  background: #5daf34; 
+  border-color: #5daf34;
+  color:#fff;
+}
+
+
+
+button:focus{
+  outline:none;/*去除蓝色边框*/
+}
+
+@keyframes myfirst
+{
+0% {transform:rotate(0deg);}
+50% {transform:rotate(-5deg);}
+100%{transform:rotate(5deg);}}
+
+
+/*卡片*/
+.card{
+  width: 250px;
+  height: 100px;
+  margin: 15px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 0px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #0000004a;
+  padding: 8px;
+}
+
+h1{
+  color:#03A9F4;
+}
+h2{
+  font-weight: 500;
+  color: #1f2f3f;
+  margin-top: 18px;
+}
+
+
+hr{
+  border-top: .5px solid #ddd;
+}
