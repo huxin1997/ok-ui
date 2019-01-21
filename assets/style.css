@@ -50,19 +50,30 @@ body{
 .ok-text {
   display: block;
   padding: 11px;
-  border: 1.5px solid  rgb(200, 200, 200);
+  border: 1px solid  rgb(200, 200, 200);
   border-radius: 5px;
   transition: all .5s;
   font-weight: 500;
   width: 250px;
   font-size: 1.1em;
   color: #606266;
+  /* 待更改 */
+  margin-bottom: 8px !important; 
+}
+.ok-text[ok-status=error]{
+  /* border-color:#ff0000; */
+}
+.ok-text[ok-status=error]:focus{
+  border-color:#e74c3c;
+  box-shadow: 3px 4px 8px -4px #e74c3c;
 }
 /* .ok-text:hover{
   border-color: rgb(162, 162, 162)
 } */
 .ok-text:focus{
   border-color:#03A9F4;
+  box-shadow: 3px 4px 8px -4px #03A9F4;
+
 }
 
 /* 组件 end */
