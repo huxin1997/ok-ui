@@ -19,6 +19,7 @@ body{
   box-shadow: 2px 3px 5px #00000014;
   margin: 0 4px;
   transition: all .5s;
+  cursor: pointer;
 }
 .btn:focus{
   border-color: #03A9F4;
