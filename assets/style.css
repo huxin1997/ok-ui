@@ -1,14 +1,15 @@
-
-
+/* 初始化 start */
 body{
   padding-top: 50px;
   text-align: center;
   color: #606266;
   margin: 0;
   font-size: 14px;
+  font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
+/* 初始化 end */
 
-
+/* 组件 start */
 .btn{
   padding: 10px;
   min-width: 80px;
@@ -46,18 +47,39 @@ body{
   color:#fff;
 }
 
+.ok-text {
+  display: block;
+  padding: 11px;
+  border: 1.5px solid  rgb(200, 200, 200);
+  border-radius: 5px;
+  transition: all .5s;
+  font-weight: 500;
+  width: 250px;
+  font-size: 1.1em;
+  color: #606266;
+}
+/* .ok-text:hover{
+  border-color: rgb(162, 162, 162)
+} */
+.ok-text:focus{
+  border-color:#03A9F4;
+}
+
+/* 组件 end */
 
 
-button:focus{
+button:focus,input{
   outline:none;/*去除蓝色边框*/
 }
+
+/* 动画 start */
 
 @keyframes myfirst
 {
 0% {transform:rotate(0deg);}
 50% {transform:rotate(-5deg);}
 100%{transform:rotate(5deg);}}
-
+/* 动画 end */
 
 /*卡片*/
 .card{
@@ -72,6 +94,8 @@ button:focus{
   padding: 8px;
 }
 
+/* debug */
+
 h1{
   color:#03A9F4;
 }
@@ -81,7 +105,9 @@ h2{
   margin-top: 18px;
 }
 
-
 hr{
   border-top: .5px solid #ddd;
+}
+.center{
+  margin: 0 auto;
 }
