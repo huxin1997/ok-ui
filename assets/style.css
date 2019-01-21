@@ -1,6 +1,5 @@
 /* 初始化 start */
 body{
-  padding-top: 50px;
   text-align: center;
   color: #606266;
   margin: 0;
@@ -76,6 +75,14 @@ body{
 
 }
 
+.ok-img{
+  border-radius: 100px;
+}
+.ok-img[shadow=true]{
+  box-shadow: 0px 4px 8px -2px black;
+}
+
+
 /* 组件 end */
 
 
@@ -109,15 +116,21 @@ button:focus,input{
 
 h1{
   color:#03A9F4;
+  padding: 15px;
 }
 h2{
   font-weight: 500;
-  color: #1f2f3f;
+  color: #fff;
   margin-top: 18px;
+  font-size: 1.6em;
+  transition: all 1s;
 }
 
 hr{
   border-top: .5px solid #ddd;
+}
+ h2:hover {
+  color: #1f2f3f;
 }
 .center{
   margin: 0 auto;
