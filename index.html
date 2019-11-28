@@ -2,87 +2,132 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./assets/style.css">
-  <title>OK-UI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <link rel="stylesheet"
+          href="assets/css/arduino-light.css">
+    <script src="assets/js/highlight.pack.js"></script>
+    <title>OK-UI</title>
 </head>
 
 <body>
-  <h1>OK-UI</h1>
-  <hr>
-  <div>
-    <h2 class="">按钮</h2>
-    <button class="btn btn-success">成功</button>
-    <button class="btn btn-primary">确认</button>
-    <button class="btn">取消</button>
-  </div>
 
-  <div>
-    <h2>卡片</h2>
-    <div class="card">
-      <img src="./assets/img//qtn.png" alt="" height="50">
-      <p>Hello world!</p>
+<div class="header center">
+    <h1>OK-UI
+        <small style="font-size: 14px"><br>一个小巧的Css样式库</small>
+    </h1>
+</div>
+
+
+<div class="main">
+    <div class="box-left">
+        <ul>
+            <h3>基本组件</h3>
+            <li><a href="#demo-button">按钮</a></li>
+            <li><a href="#demo-switch">开关</a></li>
+            <li><a href="#demo-img">图片</a></li>
+            <h3>表单</h3>
+            <li><a href="#demo-text">输入框</b></a></li>
+            <h3>容器</h3>
+            <li><a href="#demo-card">卡片</a></li>
+
+        </ul>
     </div>
-  </div>
+    <div class="box-right">
+        <div id="demo-button">
+            <h2 class="">按钮</h2>
+            <button class="btn btn-success">成功</button>
+            <button class="btn btn-primary">确认</button>
+            <button class="btn">取消</button>
+        </div>
+
+        <div id="demo-switch">
+            <h2>开关</h2>
+            <div class="ok-switch">
+                <input type="checkbox" name="switcher" id="switcher">
+                <label for="switcher"></label>
+            </div>
+            <br>
+            <div class="ok-switch-outside">
+                <h4>外部开关文字：</h4>
+                <div class="ok-switch">
+                    <input type="checkbox" name="switcher-text" id="switcher-text">
+                    <label for="switcher-text"></label>
+                </div>
+            </div>
+        </div>
+        <div id="demo-text">
+            <h2>文本框</h2>
+            <div>
+                <input type="text" placeholder="我想吃🍋" class="ok-text center">
+                <input type="text" placeholder="这是错误框❌" ok-status="error" class="ok-text center">
+            </div>
+        </div>
+        <div id="demo-card">
+            <h2>卡片</h2>
+            <div class="card">
+                <img src="./assets/img//qtn.png" alt="" height="50">
+                <p>Hello world!</p>
+            </div>
+
+            <div class="card" style="margin-top: 8px">
+                <pre><code class="html" id="code-view" style="text-align: left"><p>123</p></code></pre>
+            </div>
+        </div>
 
 
-  <div>
-    <h2>文本框</h2>
-    <div>
-      <input type="text" placeholder="我想吃🍋" class="ok-text center">
-      <input type="text" placeholder="这是错误框❌" ok-status="error" class="ok-text center">
+        <div id="demo-img">
+            <h2>图片</h2>
+            <div>
+                <b>normal</b>
+                <img width="100" height="100" class="ok-img"
+                     src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/7f/b8/8c/7fb88c0c-c9b4-c0ba-0703-fe718d42e335/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-85-220.png/640x0w.png">
+                <img width="60" height="60" class="ok-img"
+                     src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/7f/b8/8c/7fb88c0c-c9b4-c0ba-0703-fe718d42e335/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-85-220.png/640x0w.png">
+            </div>
+            <div style="height: 30px;"></div>
+            <div>
+                <b>shadow</b>
+                <img width="100" height="100" class="ok-img" shadow="true"
+                     src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/7f/b8/8c/7fb88c0c-c9b4-c0ba-0703-fe718d42e335/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-85-220.png/640x0w.png">
+                <img width="60" height="60" class="ok-img" shadow="true"
+                     src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/7f/b8/8c/7fb88c0c-c9b4-c0ba-0703-fe718d42e335/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-85-220.png/640x0w.png">
+            </div>
+        </div>
+
     </div>
-  </div>
-  <div>
-    <h2>图片</h2>
-    <div>
-      <b>normal</b>
-      <img width="100" height="100" class="ok-img" src="https://www.apple.com/autopush/cn/itunes/charts/free-apps/images/2018/2/21d871d12d8e55991510b8b7c3b069fec3fbc9027735a66af7be787290429ac4.jpg">
-      <img width="60" height="60" class="ok-img" src="https://www.apple.com/autopush/cn/itunes/charts/free-apps/images/2018/2/9d27b67350981f12625738c60c74e531bdcbc25000f10d1708ba0be4dd476763.jpg">
-    </div>
-    <div style="height: 30px;"></div>
-    <div>
-      <b>shadow</b>
-      <img width="100" height="100" class="ok-img" shadow="true" src="https://www.apple.com/autopush/cn/itunes/charts/free-apps/images/2018/2/71d601e027773a734e58e1c0034b022d3eac05ee0a80e367dc2edd9bb07e33a7.jpg">
-      <img width="60" height="60" class="ok-img" shadow="true" src="https://www.apple.com/autopush/cn/itunes/charts/free-apps/images/2018/2/9d27b67350981f12625738c60c74e531bdcbc25000f10d1708ba0be4dd476763.jpg">
-    </div>
-  </div>
+</div>
 
-  <!-- <div>
-    <h2>开关</h2>
-    <input type="checkbox" class="ok-text center">
-    <span style="width: 80px;height: 15px;background: #5f3;display: block;" ok-checked="true" onclick="change(this)">
-      <span style="width: 15px;height: 15px;background: #A99;display: block;"></span>
-    </span>
-  </div> -->
-  <div>
-      <h2>开关</h2>
-    <!--<input type="checkbox" class="ok-text center">-->
-    <!--<span style="width: 80px;height: 15px;background: #5f3;display: block;" ok-checked="true" onclick="change(this)">-->
-      <!--<span style="width: 15px;height: 15px;background: #A99;display: block;"></span>-->
-    <!--</span>-->
-      <div class="ok-switch">
-        <input type="checkbox" name="switcher" id="switcher">
-        <label for="switcher"></label>
-      </div>
-      <br>
-      <div class="ok-switch-outside">
-          <h4>外部开关文字：</h4>
-          <div class="ok-switch">
-              <input type="checkbox" name="switcher-text" id="switcher-text">
-              <label for="switcher-text"></label>
-          </div>
-      </div>
-  </div>
+<div class="footer">
+    <hr>
+    <h1>版权声明</h1>
 
+</div>
 
 
 </body>
 
 <script>
+    // addEventListener('load', function () {
+    //     const code = document.querySelector('#code-view');
+    //     const worker = new Worker('worker.js');
+    //     worker.onmessage = (event) => {
+    //         code.innerHTML = event.data;
+    //     }
+    //     worker.postMessage(code.textContent);
+    //
+    let code = document.getElementById("code-view");
 
+    code.innerText =
+        "    <div class=\"card\">\n" +
+        "        <img src=\"./assets/img//qtn.png\" alt=\"\" height=\"50\">\n" +
+        "        <p>Hello world!</p>\n" +
+        "    </div>";
+    // })
+    hljs.initHighlightingOnLoad();
 </script>
 
 </html>
