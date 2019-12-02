@@ -10,15 +10,28 @@
     <link rel="stylesheet"
           href="assets/css/arduino-light.css">
     <script src="assets/js/highlight.pack.js"></script>
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
     <title>OK-UI</title>
 </head>
 
 <body>
-
 <div class="header center">
-    <h1>OK-UI
+    <h1 style="">
+        <img src="assets/img/logo.png" alt="" width="120"
+             style="float: left">
+        OK-UI
         <small style="font-size: 14px"><br>一个小巧的Css样式库</small>
+
     </h1>
+
+
+    <div class="nav">
+        <li><a href="#">指南</a></li>
+        <li><a href="#">组件</a></li>
+        <li><a href="#">演示</a></li>
+        <li><a href="#">关于</a></li>
+    </div>
 </div>
 
 
@@ -33,18 +46,26 @@
             <li><a href="#demo-text">输入框</b></a></li>
             <h3>容器</h3>
             <li><a href="#demo-card">卡片</a></li>
+            <li><a href="#demo-img">图片</a></li>
 
         </ul>
     </div>
     <div class="box-right">
-        <div id="demo-button">
+
+        <div id="demo-button" class="card">
             <h2 class="">按钮</h2>
             <button class="btn btn-success">成功</button>
             <button class="btn btn-primary">确认</button>
             <button class="btn">取消</button>
+
+            <div class="box-code" onclick="showCode(this)">
+                <i class="fa fa-angle-double-down"></i>
+                显示代码
+                <pre><code class="html" id="code-view-1"></code></pre>
+            </div>
         </div>
 
-        <div id="demo-switch">
+        <div id="demo-switch" class="card">
             <h2>开关</h2>
             <div class="ok-switch">
                 <input type="checkbox" name="switcher" id="switcher">
@@ -59,27 +80,31 @@
                 </div>
             </div>
         </div>
-        <div id="demo-text">
+        <div id="demo-text" class="card">
             <h2>文本框</h2>
             <div>
-                <input type="text" placeholder="我想吃🍋" class="ok-text center">
-                <input type="text" placeholder="这是错误框❌" ok-status="error" class="ok-text center">
+                <p>
+                    <input type="text" ok-effect="on" placeholder="默认文本框" class="ok-text center">
+                    <input type="text" ok-effect="on" placeholder="错误框" ok-status="error" class="ok-text center">
+                </p>
+                <input type="text" placeholder="默认文本框" class="ok-text center">
+                <input type="text" placeholder="错误框" ok-status="error" class="ok-text center">
             </div>
         </div>
         <div id="demo-card">
-            <h2>卡片</h2>
             <div class="card">
+                <h2>卡片</h2>
                 <img src="./assets/img//qtn.png" alt="" height="50">
                 <p>Hello world!</p>
             </div>
 
             <div class="card" style="margin-top: 8px">
-                <pre><code class="html" id="code-view" style="text-align: left"><p>123</p></code></pre>
+                <pre><code class="html" id="code-view-2" style="text-align: left"><p>123</p></code></pre>
             </div>
         </div>
 
 
-        <div id="demo-img">
+        <div id="demo-img" class="card">
             <h2>图片</h2>
             <div>
                 <b>normal</b>
@@ -103,31 +128,78 @@
 
 <div class="footer">
     <hr>
-    <h1>版权声明</h1>
-
+    <nav class="footer-nav">
+        <a class="footer-nav-item active" href="/">Electron</a>
+        <a class="footer-nav-item" href="/docs">文档</a>
+        <a class="footer-nav-item" href="/blog">博客</a>
+        <a class="footer-nav-item" href="/community">社区</a>
+        <a class="footer-nav-item" href="/apps">应用</a>
+        <a class="footer-nav-item" href="/releases/stable">版本发布</a>
+        <a class="footer-nav-item" href="https://github.com/electron/electron/tree/master/CODE_OF_CONDUCT.md">行为准则</a>
+        <a class="footer-nav-item" href="https://github.com/electron/electron/tree/master/LICENSE">许可</a>
+        <a class="footer-nav-item" href="https://github.com/electron/electron/tree/master/SECURITY.md">安全</a>
+        <a class="footer-nav-item" href="/languages">语言</a>
+        <a class="footer-nav-item" href="/contact">联系我们</a>
+    </nav>
+    <i class="fa fa-github fa-5x"></i>
 </div>
 
 
 </body>
 
 <script>
-    // addEventListener('load', function () {
-    //     const code = document.querySelector('#code-view');
-    //     const worker = new Worker('worker.js');
-    //     worker.onmessage = (event) => {
-    //         code.innerHTML = event.data;
-    //     }
-    //     worker.postMessage(code.textContent);
-    //
-    let code = document.getElementById("code-view");
+    let code1 = document.getElementById("code-view-1");
+    let code2 = document.getElementById("code-view-2");
 
-    code.innerText =
-        "    <div class=\"card\">\n" +
-        "        <img src=\"./assets/img//qtn.png\" alt=\"\" height=\"50\">\n" +
-        "        <p>Hello world!</p>\n" +
-        "    </div>";
-    // })
-    hljs.initHighlightingOnLoad();
+    function init() {
+        let code = document.getElementById("code-view");
+
+        code.innerText =
+            "    <div class=\"card\">\n" +
+            "        <img src=\"./assets/img//qtn.png\" alt=\"\" height=\"50\">\n" +
+            "        <p>Hello world!</p>\n" +
+            "    </div>";
+        // })
+        hljs.initHighlightingOnLoad();
+    }
+
+    let imgBox = document.getElementById("demo-img");
+    let boxes = document.querySelectorAll(".box-right>div")
+    let leftNav = document.querySelectorAll(".box-left a")
+    console.log(boxes)
+
+    window.addEventListener("scroll", function () {
+        var sh = document.documentElement.scrollTop;
+
+
+        let min = 0;
+        for (let i = 0; i < boxes.length; i++) {
+            var eh = boxes[i].offsetTop;
+
+            if (eh < sh) {
+
+            } else {
+                console.log(i)
+                min = i;
+                break;
+
+            }
+
+        }
+
+
+        for (let i = 0; i < leftNav.length; i++) leftNav[i].classList.remove("a-select")
+        leftNav[min].classList.add("a-select");
+
+
+        console.log(" ")
+
+
+    });
+
+    init();
+
+
 </script>
 
 </html>

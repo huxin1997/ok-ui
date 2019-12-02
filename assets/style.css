@@ -8,7 +8,9 @@ body {
     font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
 
-html, body { scroll-behavior:smooth; }
+html, body {
+    scroll-behavior: smooth;
+}
 
 /* 初始化 end */
 
@@ -34,8 +36,10 @@ html, body { scroll-behavior:smooth; }
 }
 
 .btn-primary {
-    color: #03A9F4;
+    /*color: #03A9F4;*/
+    color: #fff;
     border: 1px solid #03A9F4;
+    background: #03A9F4;
 }
 
 .btn-primary:focus {
@@ -73,7 +77,7 @@ html, body { scroll-behavior:smooth; }
     /* border-color:#ff0000; */
 }
 
-.ok-text[ok-status=error]:focus {
+.ok-text[ok-status=error]:focus, .ok-text[ok-effect=on][ok-status=error] {
     border-color: #e74c3c;
     box-shadow: 3px 4px 8px -4px #e74c3c;
 }
@@ -81,7 +85,7 @@ html, body { scroll-behavior:smooth; }
 /* .ok-text:hover{
   border-color: rgb(162, 162, 162)
 } */
-.ok-text:focus {
+.ok-text:focus, .ok-text[ok-effect=on] {
     border-color: #03A9F4;
     box-shadow: 3px 4px 8px -4px #03A9F4;
 
@@ -177,11 +181,11 @@ button:focus, input {
 
 /*卡片*/
 .card {
-    width: 500px;
-    height: 100px;
+    width: 800px;
+
     margin: 15px;
     background: #fff;
-    margin: 0 auto;
+    margin: 30px auto;
     margin-top: 0px;
     border-radius: 8px;
     box-shadow: 0 0 4px #0000004a;
@@ -200,7 +204,7 @@ h1 {
 
 h2 {
     font-weight: 500;
-    color: #fff;
+    color: #acacac;
     margin-top: 18px;
     font-size: 1.6em;
     transition: all 1s;
@@ -228,9 +232,11 @@ h2:hover {
     border-bottom: .5px solid #dcdfe6;
     padding: 10px;
     left: 10%;
+    z-index: 999;
 }
+
 .main {
-    margin-top: 100px;
+    margin-top: 160px;
 }
 
 .box-left {
@@ -240,6 +246,7 @@ h2:hover {
     left: 10%;
     top: 100px;
 }
+
 .box-right {
     text-align: center;
 }
@@ -250,20 +257,69 @@ ul li {
 
 .box-left a {
     text-decoration: none;
-    color: #ddd;
+    color: #666;
+
+    font-size: 16px;
+
+    display: block;
     padding-left: 15px;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
+
 .box-left a:visited {
     color: #666;
 }
 
-.box-left a:hover {
-    color: #03A9F4;
+.box-left a:hover, .a-select {
+    color: #03A9F4 !important;
 }
 
 .box-left h3 {
     color: #000;
     margin: 0;
+    font-size: 20px;
+    padding: 5px;
 }
+
+
+.nav {
+    float: right;
+}
+
+.nav li {
+    float: left;
+    list-style: none;
+}
+
+.nav a, .nav:visited {
+    text-decoration: none;
+    color: #03A9F4;
+    display: block;
+    height: 100%;
+    font-size: 15px;
+}
+
+.box-code {
+    border-top: 1px solid #ddd;
+    margin-top: 22px;
+
+}
+
+.footer {
+    height: 150px;
+    text-align: center;
+    background: #2b2b2b;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ddd;
+}
+.footer i {
+    color: #ddd;
+}
+
 
 
