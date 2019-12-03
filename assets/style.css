@@ -145,13 +145,17 @@ html, body {
     background: #5daf34;
 }
 
+.ok-switch[ok-color="primary"] input[type=checkbox]:checked {
+    background: #03A9F4;
+}
+
 .ok-switch-outside {
     display: inline-block;
     height: 26px;
     line-height: 26px;
 }
 
-.ok-switch-outside h4 {
+.ok-switch-outside span {
     margin: 0;
     float: left;
 }
@@ -181,15 +185,15 @@ button:focus, input {
 
 /*卡片*/
 .card {
-    width: 800px;
+    width: 750px;
 
     margin: 15px;
     background: #fff;
     margin: 30px auto;
     margin-top: 0px;
     border-radius: 8px;
-    box-shadow: 0 0 4px #0000004a;
-    padding: 8px;
+    box-shadow:0.5px 0px 2px .1px #0000004a;
+    padding: 16px;
 }
 
 /* debug */
@@ -248,7 +252,7 @@ h2:hover {
 }
 
 .box-right {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 ul li {
@@ -286,6 +290,7 @@ ul li {
 
 .nav {
     float: right;
+    /*margin-top: -20px;*/
 }
 
 .nav li {
@@ -298,13 +303,20 @@ ul li {
     color: #03A9F4;
     display: block;
     height: 100%;
-    font-size: 15px;
+    font-size: 18px;
+    margin-right: 20px;
+
 }
 
 .box-code {
     border-top: 1px solid #ddd;
     margin-top: 22px;
 
+}
+
+.box-code .code-header {
+    text-align: center;
+    display: block;
 }
 
 .footer {
@@ -317,9 +329,24 @@ ul li {
     text-decoration: none;
     color: #ddd;
 }
+
 .footer i {
     color: #ddd;
 }
+
+.table-attr {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.table-attr th{
+    width: 25%;
+}
+.table-attr td, .table-attr th{
+    border-bottom: .5px solid #ddd;
+    padding: 8px;
+}
+
 
 
 

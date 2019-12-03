@@ -12,16 +12,16 @@
     <script src="assets/js/highlight.pack.js"></script>
     <link rel="stylesheet" href="assets/css/font-awesome.css">
 
+
     <title>OK-UI</title>
 </head>
 
 <body>
 <div class="header center">
-    <h1 style="">
+    <h1 style="margin:  0 auto;width: 100%;">
         <img src="assets/img/logo.png" alt="" width="120"
              style="float: left">
         OK-UI
-        <small style="font-size: 14px"><br>一个小巧的Css样式库</small>
 
     </h1>
 
@@ -54,30 +54,82 @@
 
         <div id="demo-button" class="card">
             <h2 class="">按钮</h2>
-            <button class="btn btn-success">成功</button>
-            <button class="btn btn-primary">确认</button>
-            <button class="btn">取消</button>
+            <p>常用的操作按钮。</p>
+            <div>
+                <button class="btn btn-success">成功按钮</button>
+                <button class="btn btn-primary">确认按钮</button>
+                <button class="btn">默认按钮</button>
+            </div>
+            <div>
+                <p>图标按钮</p>
+                <button class="btn btn-primary"><i class="fa fa-search"></i>搜索</button>
+                <button class="btn btn-primary"><i class="fa fa-comment"></i></button>
+                <button class="btn btn-primary"><i class="fa fa-share"></i></button>
+                <button class="btn btn-primary"><i class="fa fa-cog"></i></button>
+            </div>
+            <div>
+                <p>动画按钮</p>
+                <button class="btn btn-primary"><i class="fa fa-spinner fa-spin"></i></button>
+            </div>
 
             <div class="box-code" onclick="showCode(this)">
-                <i class="fa fa-angle-double-down"></i>
+                <span class="code-header">
+                <i class="fa fa-code"></i>
                 显示代码
+                </span>
                 <pre><code class="html" id="code-view-1"></code></pre>
             </div>
         </div>
 
         <div id="demo-switch" class="card">
             <h2>开关</h2>
-            <div class="ok-switch">
-                <input type="checkbox" name="switcher" id="switcher">
-                <label for="switcher"></label>
-            </div>
-            <br>
-            <div class="ok-switch-outside">
-                <h4>外部开关文字：</h4>
+            <div>
+                <p>基本用法</p>
                 <div class="ok-switch">
-                    <input type="checkbox" name="switcher-text" id="switcher-text">
-                    <label for="switcher-text"></label>
+                    <input checked="checked" type="checkbox" name="switcher" id="switcher">
+                    <label for="switcher"></label>
                 </div>
+            </div>
+            <hr>
+            <div>
+                <p>文字描述</p>
+                <div class="ok-switch-outside">
+                    <span>外部开关文字：</span>
+                    <div class="ok-switch" ok-color="primary">
+                        <input checked="checked" type="checkbox" name="switcher-text">
+                        <label></label>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="ok-switch-outside">
+                    <span>外部开关文字：</span>
+                    <div class="ok-switch">
+                        <input checked="checked" type="checkbox" name="switcher-text">
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>属性</h3>
+                <table class="table-attr">
+                    <thead>
+                    <tr>
+                        <th>参数</th>
+                        <th>描述</th>
+                        <th>类型</th>
+                        <th>属性值</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>ok-color</td>
+                        <td>颜色值</td>
+                        <td>string</td>
+                        <td>primary|default</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div id="demo-text" class="card">
@@ -129,77 +181,22 @@
 <div class="footer">
     <hr>
     <nav class="footer-nav">
-        <a class="footer-nav-item active" href="/">Electron</a>
-        <a class="footer-nav-item" href="/docs">文档</a>
-        <a class="footer-nav-item" href="/blog">博客</a>
-        <a class="footer-nav-item" href="/community">社区</a>
-        <a class="footer-nav-item" href="/apps">应用</a>
-        <a class="footer-nav-item" href="/releases/stable">版本发布</a>
-        <a class="footer-nav-item" href="https://github.com/electron/electron/tree/master/CODE_OF_CONDUCT.md">行为准则</a>
-        <a class="footer-nav-item" href="https://github.com/electron/electron/tree/master/LICENSE">许可</a>
-        <a class="footer-nav-item" href="https://github.com/electron/electron/tree/master/SECURITY.md">安全</a>
-        <a class="footer-nav-item" href="/languages">语言</a>
-        <a class="footer-nav-item" href="/contact">联系我们</a>
+        <a class="footer-nav-item" href="#">文档</a>
+        <a class="footer-nav-item" href="#">博客</a>
+        <a class="footer-nav-item" href="#">社区</a>
+        <a class="footer-nav-item" href="#">应用</a>
+        <a class="footer-nav-item" href="#">版本发布</a>
+        <a class="footer-nav-item" href="#">行为准则</a>
+        <a class="footer-nav-item" href="#">许可</a>
+        <a class="footer-nav-item" href="#">安全</a>
+        <a class="footer-nav-item" href="#">语言</a>
+        <a class="footer-nav-item" href="#">联系我们</a>
     </nav>
-    <i class="fa fa-github fa-5x"></i>
+    <i class="fa fa-github fa-5x" style="margin-top: 8px"></i>
 </div>
 
 
 </body>
 
-<script>
-    let code1 = document.getElementById("code-view-1");
-    let code2 = document.getElementById("code-view-2");
-
-    function init() {
-        let code = document.getElementById("code-view");
-
-        code.innerText =
-            "    <div class=\"card\">\n" +
-            "        <img src=\"./assets/img//qtn.png\" alt=\"\" height=\"50\">\n" +
-            "        <p>Hello world!</p>\n" +
-            "    </div>";
-        // })
-        hljs.initHighlightingOnLoad();
-    }
-
-    let imgBox = document.getElementById("demo-img");
-    let boxes = document.querySelectorAll(".box-right>div")
-    let leftNav = document.querySelectorAll(".box-left a")
-    console.log(boxes)
-
-    window.addEventListener("scroll", function () {
-        var sh = document.documentElement.scrollTop;
-
-
-        let min = 0;
-        for (let i = 0; i < boxes.length; i++) {
-            var eh = boxes[i].offsetTop;
-
-            if (eh < sh) {
-
-            } else {
-                console.log(i)
-                min = i;
-                break;
-
-            }
-
-        }
-
-
-        for (let i = 0; i < leftNav.length; i++) leftNav[i].classList.remove("a-select")
-        leftNav[min].classList.add("a-select");
-
-
-        console.log(" ")
-
-
-    });
-
-    init();
-
-
-</script>
-
+<script src="assets/js/main.js"></script>
 </html>
