@@ -192,7 +192,7 @@ button:focus, input {
     margin: 30px auto;
     margin-top: 0px;
     border-radius: 8px;
-    box-shadow:0.5px 0px 2px .1px #0000004a;
+    box-shadow: 0.5px 0px 2px .1px #0000004a;
     padding: 16px;
 }
 
@@ -339,12 +339,40 @@ ul li {
     text-align: center;
     border-collapse: collapse;
 }
-.table-attr th{
+
+.table-attr th {
     width: 25%;
 }
-.table-attr td, .table-attr th{
+
+.table-attr td, .table-attr th {
     border-bottom: .5px solid #ddd;
     padding: 8px;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%, 100% {
+        transform: rotate(0)
+    }
+    20%, 60% {
+        transform: rotate(-25deg)
+    }
+    40%, 80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
 }
 
 
