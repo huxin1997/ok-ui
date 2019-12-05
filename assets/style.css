@@ -14,7 +14,34 @@ html, body {
 
 /* 初始化 end */
 
+
 /* 组件 start */
+
+.ok-highlight {
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 3px;
+}
+
+
+.ok-row div[class*=ok-c] {
+    float: left;
+}
+
+.ok-c-3 {
+    width: 50%;
+}
+
+.ok-c-2 {
+    width: 33.33%;
+}
+
+.ok-c-1 {
+    width: 16.66%;
+}
+
+
 .btn {
     padding: 10px;
     min-width: 80px;
@@ -61,13 +88,13 @@ html, body {
 
 .ok-text {
     display: block;
-    padding: 11px;
+    padding: 9px;
     border: 1px solid rgb(200, 200, 200);
     border-radius: 5px;
     transition: all .5s;
-    font-weight: 500;
-    width: 250px;
-    font-size: 1.1em;
+    font-weight: 400;
+    width: 240px;
+    font-size: 1em;
     color: #606266;
     /* 待更改 */
     margin-bottom: 8px !important;
@@ -85,10 +112,29 @@ html, body {
 /* .ok-text:hover{
   border-color: rgb(162, 162, 162)
 } */
-.ok-text:focus, .ok-text[ok-effect=on] {
+.ok-text:focus, .ok-text[ok-effect=on], textarea {
     border-color: #03A9F4;
     box-shadow: 3px 4px 8px -4px #03A9F4;
 
+}
+
+.ok-input-group {
+    position: relative;
+}
+
+.ok-input-group i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.ok-input-group input {
+    text-indent: 20px;
+}
+
+
+textarea {
+    border-radius: 8px;
 }
 
 .ok-img {
@@ -160,10 +206,67 @@ html, body {
     float: left;
 }
 
+
+.ok-carousel {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.ok-carousel .ok-item {
+    height: 100%;
+    width: 100%;
+    float: left;
+    /*background: #ddd;*/
+    transition: 1s all;
+    position: absolute;
+}
+
+.ok-carousel .ok-item:nth-child(0) {
+    transform: translateX(0px);
+}
+.ok-carousel .ok-item:nth-child(1) {
+    transform: translateX(750px);
+}
+.ok-carousel .ok-item:nth-child(2) {
+    transform: translateX(1500px);
+}
+
+.ok-carousel .ok-item img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    height: 100%;
+    transition: .2s all;
+
+}
+
+
+/*卡片*/
+.card {
+    width: 750px;
+
+    margin: 15px;
+    background: #fff;
+    margin: 30px auto;
+    margin-top: 0px;
+    border-radius: 8px;
+    box-shadow: 0.5px 0px 2px .1px #0000004a;
+    padding: 16px;
+    transition: .5s all;
+}
+
+.card:hover {
+    box-shadow: 0.5px 0px 7px 2px rgba(142, 142, 142, 0.29);
+
+}
+
 /* 组件 end */
 
 
-button:focus, input {
+button:focus, input, textarea {
     outline: none; /*去除蓝色边框*/
 }
 
@@ -183,18 +286,6 @@ button:focus, input {
 
 /* 动画 end */
 
-/*卡片*/
-.card {
-    width: 750px;
-
-    margin: 15px;
-    background: #fff;
-    margin: 30px auto;
-    margin-top: 0px;
-    border-radius: 8px;
-    box-shadow: 0.5px 0px 2px .1px #0000004a;
-    padding: 16px;
-}
 
 /* debug */
 
@@ -212,6 +303,8 @@ h2 {
     margin-top: 18px;
     font-size: 1.6em;
     transition: all 1s;
+    border-left: 5px solid #03A9F4;
+    text-indent: 20px;
 }
 
 hr {
@@ -276,6 +369,7 @@ ul li {
     color: #666;
 }
 
+/*noinspection ALL*/
 .box-left a:hover, .a-select {
     color: #03A9F4 !important;
 }
@@ -309,18 +403,31 @@ ul li {
 }
 
 .box-code {
-    border-top: 1px solid #ddd;
+    border-top: 4px dashed #ddd;
     margin-top: 22px;
+    overflow: hidden;
+    height: 30px;
+    transition: .2s all;
 
 }
 
 .box-code .code-header {
     text-align: center;
     display: block;
+    cursor: pointer;
+
+}
+.box-code .code-header {
+    font-size: 1.1em;
+    margin-top: 8px;
+    transition: .2s all;
+}
+.box-code .code-header:hover {
+    transform: scale(1.1);
 }
 
 .footer {
-    height: 150px;
+    padding: 10px 0;
     text-align: center;
     background: #2b2b2b;
 }
@@ -349,6 +456,25 @@ ul li {
     padding: 8px;
 }
 
+
+/*noinspection ALL*/
+#demo-grid .ok-row div[class*=ok-c-] {
+
+}
+
+#demo-grid .ok-row div[class*=ok-c-] > div {
+    padding: 8px;
+    margin: 4px 4px;
+    background: #888;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#demo-grid .ok-row div[class*=ok-c-] > div:hover {
+    background: #aaa;
+}
+
+
 .github-corner:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out
 }
@@ -373,6 +499,37 @@ ul li {
     .github-corner .octo-arm {
         animation: octocat-wave 560ms ease-in-out
     }
+}
+
+
+#back-top {
+    width: 3em;
+    height: 3em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    right: 120px;
+    top: 60%;
+    position: fixed;
+}
+#back-top a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+#back-top a,#back-top a:visited {
+    color: #03A9F4;
+    transition: .1s all;
+}
+#back-top a:hover {
+    transform: scale(1.2) rotateZ(-20deg);
+}
+
+.footer i ,.ok-img{
+    transition: .5s all;
+}
+.footer i:hover, .ok-img:hover{
+    transform: scale(1.3);
 }
 
 

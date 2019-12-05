@@ -5,30 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="assets/style.css">
 
     <link rel="stylesheet"
-          href="assets/css/arduino-light.css">
-    <script src="assets/js/highlight.pack.js"></script>
-    <link rel="stylesheet" href="assets/css/font-awesome.css">
+          href="assets/debug/arduino-light.css">
+    <script src="assets/js/inc/highlight.pack.js"></script>
+    <link rel="stylesheet" href="assets/debug/font-awesome.css">
 
 
-    <title>OK-UI</title>
+    <title>OK-UI 前端样式库</title>
 </head>
 
 <body>
 
-<a href="https://your-url" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+<!--右上角github丝带-->
+<a href="https://github.com/huxin1997/ok-ui" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250"
+         style="fill:#70B7FD; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
 
-<div class="header center">
-        <span class="fa-stack fa-lg fa-3x" style="float: left;color: #03A9F4">
-  <i class="fa fa-smile-o fa-stack-2x"></i>
-  <i class="fa fa-sun-o fa-stack-2x "></i>
-</span>
+<div class="header center" id="head-top">
+
+    <div class="fa-stack fa-lg fa-3x" style="float: left;color: #03A9F4">
+        <i class="fa fa-smile-o fa-stack-2x"></i>
+        <i class="fa fa-sun-o fa-stack-2x  fa-spin "></i>
+    </div>
+
+
+    <div id="back-top">
+        <a href="#">
+            <i fa class="fa fa-arrow-up fa-3x"></i>
+        </a>
+    </div>
+
     <h1 style="margin:  0 auto;width: 100%;">
         OK-UI
-
     </h1>
+    <small style="position: absolute;top: 10px;right: 30px;color: #999;font-size: .6em;">&nbsp;v 0.1 Created by 胡欣
+        2019520210
+    </small>
 
 
     <div class="nav">
@@ -41,20 +62,103 @@
 
 
 <div class="main">
+
     <div class="box-left">
         <ul>
             <h3>基本组件</h3>
+            <li><a href="#demo-carousel">轮播图</a></li>
+            <li><a href="#demo-grid">网格布局</a></li>
             <li><a href="#demo-button">按钮</a></li>
             <li><a href="#demo-switch">开关</a></li>
             <h3>表单</h3>
-            <li><a href="#demo-text">输入框</b></a></li>
+            <li><a href="#demo-text">输入框</a></li>
             <h3>容器</h3>
             <li><a href="#demo-card">卡片</a></li>
             <li><a href="#demo-img">图片</a></li>
-
         </ul>
     </div>
     <div class="box-right">
+
+
+        <div id="demo-carousel" class="card" style="overflow: hidden">
+            <h2>轮播图</h2>
+            <div class="ok-carousel">
+                <div class="ok-item">
+                    <img src="https://dicloud.didistatic.com/static/dicloudpub/www/img/17.7b578d4d5c.png" alt="">
+                </div>
+                <div class="ok-item">
+                    <img src="https://dicloud.didistatic.com/static/dicloudpub/www/img/18.d25e3aefa3.png" alt="">
+                </div>
+                <div class="ok-item">
+                    <img src="https://dicloud.didistatic.com/static/dicloudpub/www/img/25.c15985c95f.png" alt="">
+                </div>
+            </div>
+            <p>可以通过使用<b class="ok-highlight">.ok-carousel</b>来完成轮播图效果，需要嵌套<b class="ok-highlight">.ok-item</b></p>
+
+            <div class="box-code">
+                <span class="code-header" onclick="showCode(this)">
+                <i class="fa fa-code"></i>
+                展开代码
+                </span>
+                <pre><code class="html" id="code-view-carousel"></code></pre>
+            </div>
+        </div>
+
+
+        <div id="demo-grid" class="card" style="overflow:hidden;">
+            <h2>网格布局</h2>
+            <div>
+                <p>基础排版可以通过使用<b class="ok-highlight">.ok-row</b>来创建一个网格布局容器</p>
+                <p>
+                    OK-UI将容器一共分为6等份，仅有3个调整宽度的属性。
+                </p>
+                <div class="ok-row" style="padding: 16px;background: #ddd;border-radius: 5px;">
+                </div>
+
+                <p>创建一个复合的网格布局，使用 <b class="ok-highlight">.ok-c-*</b></p>
+                <div class="ok-row" style="overflow: hidden">
+                    <div class="ok-c-3">
+                        <div class="debug">ok-c-3</div>
+                    </div>
+                    <div class="ok-c-3">
+                        <div class="debug">ok-c-3</div>
+                    </div>
+                    <div class="ok-c-1">
+                        <div class="debug">ok-c-1</div>
+                    </div>
+                    <div class="ok-c-1">
+                        <div class="debug">ok-c-1</div>
+                    </div>
+
+
+                    <div class="ok-c-1">
+                        <div class="debug">ok-c-1</div>
+                    </div>
+                    <div class="ok-c-3">
+                        <div class="debug">ok-c-3</div>
+                    </div>
+                    <div class="ok-c-2">
+                        <div class="debug">ok-c-2</div>
+                    </div>
+
+                    <div class="ok-c-2">
+                        <div class="debug">ok-c-2</div>
+                    </div>
+                    <div class="ok-c-2">
+                        <div class="debug">ok-c-2</div>
+                    </div>
+                </div>
+
+                <div class="box-code">
+                <span class="code-header" onclick="showCode(this)">
+                <i class="fa fa-code"></i>
+                展开代码
+                </span>
+                    <pre><code class="html" id="code-view-grid"></code></pre>
+                </div>
+            </div>
+
+        </div>
 
         <div id="demo-button" class="card">
             <h2 class="">按钮</h2>
@@ -76,12 +180,12 @@
                 <button class="btn btn-primary"><i class="fa fa-spinner fa-spin"></i></button>
             </div>
 
-            <div class="box-code" onclick="showCode(this)">
-                <span class="code-header">
+            <div class="box-code">
+                <span class="code-header" onclick="showCode(this)">
                 <i class="fa fa-code"></i>
                 显示代码
                 </span>
-                <pre><code class="html" id="code-view-1"></code></pre>
+                <pre><code class="html" id="code-view-btn"></code></pre>
             </div>
         </div>
 
@@ -114,6 +218,7 @@
                     </div>
                 </div>
             </div>
+
             <div>
                 <h3>属性</h3>
                 <table class="table-attr">
@@ -135,55 +240,93 @@
                     </tbody>
                 </table>
             </div>
+            <div class="box-code">
+                <span class="code-header" onclick="showCode(this)">
+                <i class="fa fa-code"></i>
+                展开代码
+                </span>
+                <pre><code class="html" id="code-view-text"></code></pre>
+            </div>
         </div>
         <div id="demo-text" class="card">
-            <h2>文本框</h2>
+            <h2>文本框&文本域</h2>
             <div>
-                <p>
-                    <input type="text" ok-effect="on" placeholder="默认文本框" class="ok-text center">
-                    <input type="text" ok-effect="on" placeholder="错误框" ok-status="error" class="ok-text center">
-                </p>
-                <input type="text" placeholder="默认文本框" class="ok-text center">
-                <input type="text" placeholder="错误框" ok-status="error" class="ok-text center">
-            </div>
-        </div>
-        <div id="demo-card">
-            <div class="card">
-                <h2>卡片</h2>
-                <img src="./assets/img//qtn.png" alt="" height="50">
-                <p>Hello world!</p>
+                <div>
+                    <p>输入框</p>
+                    <!--                    <input type="text" ok-effect="on" placeholder="默认文本框" class="ok-text ">-->
+                    <!--                    <input type="text" ok-effect="on" placeholder="错误框" ok-status="error" class="ok-text ">-->
+                    <input type="text" placeholder="默认文本框" class="ok-text ">
+                    <input type="text" placeholder="错误框" ok-status="error" class="ok-text ">
+                </div>
+                <div>
+                    <p>带Icon</p>
+                    <div class="ok-input-group">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="搜索" class="ok-text">
+                    </div>
+                    <div class="ok-input-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="用户名" class="ok-text">
+
+                    </div>
+                    <div class="ok-input-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="text" placeholder="密码" class="ok-text">
+                    </div>
+
+                </div>
             </div>
 
-            <div class="card" style="margin-top: 8px">
-                <pre><code class="html" id="code-view-2" style="text-align: left"><p>123</p></code></pre>
-            </div>
-        </div>
-
-
-        <div id="demo-img" class="card">
-            <h2>图片</h2>
             <div>
-                <b>normal</b>
-                <img width="100" height="100" class="ok-img"
-                     src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/7f/b8/8c/7fb88c0c-c9b4-c0ba-0703-fe718d42e335/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-85-220.png/640x0w.png">
-                <img width="60" height="60" class="ok-img"
-                     src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/7f/b8/8c/7fb88c0c-c9b4-c0ba-0703-fe718d42e335/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-85-220.png/640x0w.png">
+                <p>文本区域</p>
+                <textarea name="" id="" cols="40" rows="6"></textarea>
             </div>
-            <div style="height: 30px;"></div>
-            <div>
-                <b>shadow</b>
-                <img width="100" height="100" class="ok-img" shadow="true"
-                     src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/7f/b8/8c/7fb88c0c-c9b4-c0ba-0703-fe718d42e335/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-85-220.png/640x0w.png">
-                <img width="60" height="60" class="ok-img" shadow="true"
-                     src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/7f/b8/8c/7fb88c0c-c9b4-c0ba-0703-fe718d42e335/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-85-220.png/640x0w.png">
+            <div class="box-code">
+                <span class="code-header" onclick="showCode(this)">
+                <i class="fa fa-code"></i>
+                展开代码
+                </span>
+                <pre><code class="html" id="code-view-input"></code></pre>
             </div>
-        </div>
 
+        </div>
     </div>
+    <div id="demo-card">
+        <div class="card ">
+            <h2>卡片</h2>
+            <img src="./assets/img/qtn.png" class="center" alt="" height="50">
+            <!--            <p>Hello world!</p>-->
+            <p>面板效果使用 <b class="ok-highlight">.card</b></p>
+
+
+        </div>
+    </div>
+
+
+    <div id="demo-img" class="card">
+        <h2>图片</h2>
+        <div>
+            <b>normal</b>
+            <img width="100" height="100" class="ok-img"
+                 src="assets/img/qto.png">
+            <img width="60" height="60" class="ok-img"
+                 src="assets/img/qtj.png">
+        </div>
+        <div style="height: 30px;"></div>
+        <div>
+            <b>shadow</b>
+            <img width="100" height="100" class="ok-img" shadow="true"
+                 src="assets/img/qtm.png">
+            <img width="60" height="60" class="ok-img" shadow="true"
+                 src="assets/img/qtk.png">
+        </div>
+        <p>更新中...</p>
+    </div>
+
 </div>
 
+
 <div class="footer">
-    <hr>
     <nav class="footer-nav">
         <a class="footer-nav-item" href="#">文档</a>
         <a class="footer-nav-item" href="#">博客</a>
