@@ -532,6 +532,25 @@ ul li {
     transform: scale(1.3);
 }
 
+@media screen and (max-width:800px ) {
+    .box-left {
+        display: none;
+    }
+    .header {
+        width: 100%;
+        left: 0;
+    }
+    .card {
+        width: 90%;
+
+    }
+}
+
+@media screen and (min-width:800px ) {
+
+
+}
+
 
 
 
