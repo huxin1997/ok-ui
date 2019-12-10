@@ -1,0 +1,14 @@
+/* 初始化 start */
+body {
+    color: #606266;
+    margin: 0;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+}
+
+.page-body {
+    width: 900px;
+    margin : 0 auto;
+}

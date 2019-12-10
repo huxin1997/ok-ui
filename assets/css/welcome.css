@@ -1,0 +1,126 @@
+/* 初始化 start */
+body {
+    color: #606266;
+    margin: 0;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+}
+
+.box-list {
+    position: relative;
+}
+
+.page-body h1 {
+    text-align: center;
+    font-size: 130px;
+    font-weight: 200;
+    color: #1E1E1E;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+}
+.page-body span {
+    text-align: center;
+    font-size: 25px;
+    display: block;
+}
+.box1 {
+    background: #03A9F4;
+    width: 30vw;
+    height: 30vw;
+    position: fixed;
+    left: 0;
+    bottom: -10vw;
+    transition: 1s all;
+    transform: rotateZ(30deg);
+}
+
+.box1:hover {
+    transform: rotateZ(0deg);
+}
+.box2 {
+    position: fixed;
+    left: 20vw;
+    bottom: -10vw;
+    width: 30vw;
+    border-radius: 30vw;
+    height: 30vw;
+    background: #FF5722;
+    transition: 1s all;
+    box-shadow: -2px 0px 6px 3px #0000004d;
+}
+.box2:hover {
+    transform: rotateX(40deg) rotateY(40deg);
+}
+.box3 {
+    position: fixed;
+    left: 40vw;
+    bottom: 0vw;
+    width: 0vw;
+
+    /*border-radius: 30vw;*/
+    border: 10vw solid ;
+    border-color: #915bc2 #ffffff00 #ffffff00 #ffffff00;
+    height: 0vw;
+    /*background: #ff5722;*/
+    transform: rotate(180deg);
+
+}
+.box3:hover {
+    /*transition: 1s all;*/
+    /*transform: scale(1.2);*/
+}
+
+.box4 {
+
+
+
+}
+.box4 {
+    width: 20vw;
+    height: 20vw;
+    position: fixed;
+    right: 0vw;
+    border: 0vw;
+}
+
+.box4 .dog1 {
+    width: 20vw;
+    height: 20vw;
+    position: fixed;
+    right: 0vw;
+    border: 0vw;
+    background: url('https://www.delac.io/wow/img/wow-11.gif') no-repeat;
+    transition: .3s all;    
+}
+.box4 .dog2 {
+    width: 20vw;
+    height: 20vw;
+    position: fixed;
+    right: 0vw;
+    border: 0vw;
+    background: url('https://www.delac.io/wow/img/grumpy.gif') no-repeat;
+    transition: .4s all;
+}
+.box4 .dog3 {
+    width: 20vw;
+    height: 20vw;
+    position: fixed;
+    right: 0vw;
+    border: 0vw;
+    background: url('https://www.delac.io/wow/img/wow-9.gif') no-repeat;
+    transition: .5s all;
+}
+.box4:hover .dog1 {
+    transform: translate3d(-20vw,5vw,0) rotate3d(0,0,1,-45deg);
+}
+
+.box4:hover .dog2 {
+    transform: translate3d(-10vw,-5vw,0) rotate3d(0,0,1,-30deg);
+}
+
+.box4:hover .dog3 {
+    transform: translate3d(3vw,-10vw,0) rotate3d(0,0,1,-15deg);
+}

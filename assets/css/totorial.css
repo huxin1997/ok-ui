@@ -1,0 +1,35 @@
+/* 初始化 start */
+body {
+    color: #606266;
+    margin: 0;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+}
+
+.page-body {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.tutorial h3 {
+    /*height: 30px;*/
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.tutorial p {
+    text-indent: 20px;
+    padding-left: 10px;
+}
+
+.tutorial > div  button{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.tutorial .card {
+    width: 90%;
+    margin: 15px;
+}
+
