@@ -1,10 +1,11 @@
 window.onload = function () {
 
     let headTop = document.getElementById("head-top2");
-    if (headTop === null) {
+    let footer = document.getElementById("footer2");
+    if (headTop === null || footer === null) {
         return;
     }
-    headTop.innerHTML ='\n' +
+    headTop.innerHTML = '\n' +
         '    <div class="fa-stack fa-lg fa-3x" style="float: left;color: #03A9F4">\n' +
         '        <i class="fa fa-smile-o fa-stack-2x"></i>\n' +
         '        <i class="fa fa-sun-o fa-stack-2x  fa-spin "></i>\n' +
@@ -15,13 +16,26 @@ window.onload = function () {
         '        OK-UI\n' +
         '    </h1>\n' +
         '    <div class="nav">\n' +
-        '        <li><a href="#">指南</a></li>\n' +
-        '        <li><a href="#">组件</a></li>\n' +
-        '        <li><a href="#">演示</a></li>\n' +
-        '        <li><a href="#">关于</a></li>\n' +
-        '    </div>';
+        '        <li><a href="index.html">首页</a></li>\n' +
+        '        <li><a href="welcome.html">欢迎页</a></li>\n' +
+        '        <li><a href="guide.html">指南</a></li>\n' +
+        '        <li><a href="tutorial.html">教程</a></li>\n' +
+        '        <li><a href="about.html">关于</a></li>'
+    '    </div>';
 
-    console.log(5)
+    footer.innerHTML = '<nav class="footer-nav">\n' +
+        '        <a class="footer-nav-item" href="#">文档</a>\n' +
+        '        <a class="footer-nav-item" href="#">博客</a>\n' +
+        '        <a class="footer-nav-item" href="#">社区</a>\n' +
+        '        <a class="footer-nav-item" href="#">应用</a>\n' +
+        '        <a class="footer-nav-item" href="#">版本发布</a>\n' +
+        '        <a class="footer-nav-item" href="#">行为准则</a>\n' +
+        '        <a class="footer-nav-item" href="#">许可</a>\n' +
+        '        <a class="footer-nav-item" href="#">安全</a>\n' +
+        '        <a class="footer-nav-item" href="#">语言</a>\n' +
+        '        <a class="footer-nav-item" href="#">联系我们</a>\n' +
+        '    </nav>\n' +
+        '    <i class="fa fa-github fa-5x" style="margin-top: 8px"></i>';
 
 }
 
@@ -67,7 +81,7 @@ function init() {
         '    <button class="btn btn-primary"><i class="fa fa-comment"></i></button>\n' +
         '    <button class="btn btn-primary"><i class="fa fa-share"></i></button>\n' +
         '    <button class="btn btn-primary"><i class="fa fa-cog"></i></button>'
-    codeInput.innerText  ='<div class="ok-input-group">\n' +
+    codeInput.innerText = '<div class="ok-input-group">\n' +
         '    <i class="fa fa-search"></i>\n' +
         '    <input type="text" placeholder="搜索" class="ok-text">\n' +
         '</div>\n' +
@@ -121,6 +135,7 @@ function init() {
 let imgBox = document.getElementById("demo-img");
 let boxes = document.querySelectorAll(".box-right>div")
 let leftNav = document.querySelectorAll(".box-left a")
+let headTop = document.getElementById("head-top");
 let postion = 0;
 console.log(boxes)
 
@@ -129,6 +144,17 @@ window.addEventListener("scroll", function () {
     if (Math.abs(sh - postion) < 150) {
         return;
     }
+
+    if (sh - postion > 0) {
+        // headTop.style.height = '0px';
+        // headTop.style.display = 'none';
+        headTop.style.transform = 'translateY(-105px)'
+    } else {
+        // headTop.style.display = 'block';
+        // headTop.style.height = '80px';
+        headTop.style.transform = 'translateY(0)'
+    }
+
     postion = sh;
 
 

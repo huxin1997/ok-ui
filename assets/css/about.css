@@ -1,14 +1,25 @@
 /* 初始化 start */
 body {
-    color: #606266;
-    margin: 0;
-    font-size: 14px;
-    padding: 0;
-    margin: 0;
-    font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+    letter-spacing: 1px;
+    color: #34495e;
 }
-
 .page-body {
     width: 900px;
-    margin : 0 auto;
+    margin: 120px auto;
+}
+
+h2, h3, h1 {
+    color: #1f2f3d;
+    font-weight: 400;
+}
+p {
+
+    text-indent: 40px;
+}
+
+.head-img {
+    transition: .5s all;
+}
+.page-body:hover .head-img {
+    transform: rotate3d(0,1,0,180deg);
 }

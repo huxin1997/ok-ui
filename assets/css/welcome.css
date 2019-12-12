@@ -12,6 +12,8 @@ body {
     position: relative;
 }
 
+
+
 .page-body h1 {
     text-align: center;
     font-size: 130px;
@@ -35,6 +37,7 @@ body {
     bottom: -10vw;
     transition: 1s all;
     transform: rotateZ(30deg);
+    animation: box1 1.5s ease-in-out;
 }
 
 .box1:hover {
@@ -50,6 +53,8 @@ body {
     background: #FF5722;
     transition: 1s all;
     box-shadow: -2px 0px 6px 3px #0000004d;
+    animation:box2 2s  ease ;
+
 }
 .box2:hover {
     transform: rotateX(40deg) rotateY(40deg);
@@ -62,10 +67,11 @@ body {
 
     /*border-radius: 30vw;*/
     border: 10vw solid ;
-    border-color: #915bc2 #ffffff00 #ffffff00 #ffffff00;
+    border-color: #ffffff00 #ffffff00 #915bc2 #ffffff00;
     height: 0vw;
     /*background: #ff5722;*/
-    transform: rotate(180deg);
+    /*transform: rotate(180deg);*/
+    animation: box3 2s ease;
 
 }
 .box3:hover {
@@ -124,3 +130,69 @@ body {
 .box4:hover .dog3 {
     transform: translate3d(3vw,-10vw,0) rotate3d(0,0,1,-15deg);
 }
+
+.page-body > div {
+    text-align: center;
+}
+.see-more {
+    color: #03A9F4;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px;
+    border: 3px solid #03A9F4;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 1em;
+
+}
+.see-more:visited {
+    color: #03A9F4;
+}
+.see-more:hover {
+    box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.36);
+}
+
+
+@keyframes box1 {
+
+    from {
+        bottom: -40vw;
+        background: #03A9F400;
+
+    }
+    to{
+        bottom: -10vw;
+        background: #03A9F4FF;
+    }
+
+}
+
+@keyframes box2 {
+    from {
+        left: -30vw;
+
+    }
+    to{
+        left: 20vw;
+    }
+
+}
+
+@keyframes box3 {
+
+
+
+    from {
+        /*transform: rotate3d(0,1,0,90deg);*/
+/*background: #00000000;*/
+        border-bottom-color: #00000000;
+
+    }
+    to{
+
+        /*transform: rotate3d(0,1,0,0deg);*/
+        border-bottom-color: #915bc2;
+    }
+}
+
