@@ -1,5 +1,27 @@
-document.onload = function () {
+window.onload = function () {
 
+    let headTop = document.getElementById("head-top2");
+    if (headTop === null) {
+        return;
+    }
+    headTop.innerHTML ='\n' +
+        '    <div class="fa-stack fa-lg fa-3x" style="float: left;color: #03A9F4">\n' +
+        '        <i class="fa fa-smile-o fa-stack-2x"></i>\n' +
+        '        <i class="fa fa-sun-o fa-stack-2x  fa-spin "></i>\n' +
+        '    </div>\n' +
+        '\n' +
+        '\n' +
+        '    <h1>\n' +
+        '        OK-UI\n' +
+        '    </h1>\n' +
+        '    <div class="nav">\n' +
+        '        <li><a href="#">指南</a></li>\n' +
+        '        <li><a href="#">组件</a></li>\n' +
+        '        <li><a href="#">演示</a></li>\n' +
+        '        <li><a href="#">关于</a></li>\n' +
+        '    </div>';
+
+    console.log(5)
 
 }
 
