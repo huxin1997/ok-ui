@@ -42,13 +42,13 @@ window.onload = function () {
 let codeCarousel = document.getElementById("code-view-carousel");
 let codeBtn = document.getElementById("code-view-btn");
 let codeGird = document.getElementById("code-view-grid");
-let codeText = document.getElementById("code-view-text");
+let codeSwitch = document.getElementById("code-view-switch");
 let codeInput = document.getElementById("code-view-input");
 let codeCard = document.getElementById("code-view-card");
 
 function init() {
 
-    codeBtn.innerText =
+    codeCard.innerText =
         "    <div class=\"card\">\n" +
         "        <img src=\"./assets/img//qtn.png\" alt=\"\" height=\"50\">\n" +
         "        <p>Hello world!</p>\n" +
@@ -66,15 +66,39 @@ function init() {
         '    </div>\n' +
         '</div>';
 
-    codeGird.innerText = '' +
-        '<div class="box-code">\n' +
-        '    <span class="code-header" onclick="showCode(this)">\n' +
-        '    <i class="fa fa-code"></i>\n' +
-        '    展开代码\n' +
-        '    </span>\n' +
-        '    <pre><code class="html" id="code-view-grid"></code></pre>\n' +
-        '</div>';
-    codeText.innerText = '    <button class="btn">默认按钮</button>\n' +
+    codeGird.innerText = '    <div class="ok-row" style="overflow: hidden">\n' +
+        '        <div class="ok-c-3">\n' +
+        '            <div class="debug">ok-c-3</div>\n' +
+        '        </div>\n' +
+        '        <div class="ok-c-3">\n' +
+        '            <div class="debug">ok-c-3</div>\n' +
+        '        </div>\n' +
+        '        <div class="ok-c-1">\n' +
+        '            <div class="debug">ok-c-1</div>\n' +
+        '        </div>\n' +
+        '        <div class="ok-c-1">\n' +
+        '            <div class="debug">ok-c-1</div>\n' +
+        '        </div>\n' +
+        '\n' +
+        '\n' +
+        '        <div class="ok-c-1">\n' +
+        '            <div class="debug">ok-c-1</div>\n' +
+        '        </div>\n' +
+        '        <div class="ok-c-3">\n' +
+        '            <div class="debug">ok-c-3</div>\n' +
+        '        </div>\n' +
+        '        <div class="ok-c-2">\n' +
+        '            <div class="debug">ok-c-2</div>\n' +
+        '        </div>\n' +
+        '\n' +
+        '        <div class="ok-c-2">\n' +
+        '            <div class="debug">ok-c-2</div>\n' +
+        '        </div>\n' +
+        '        <div class="ok-c-2">\n' +
+        '            <div class="debug">ok-c-2</div>\n' +
+        '        </div>\n' +
+        '    </div>\n';
+    codeBtn.innerText = '    <button class="btn">默认按钮</button>\n' +
         '    <button class="btn btn-primary">确认按钮</button>\n' +
         '    <button class="btn btn-success">成功按钮</button>\n' +
         '    <button class="btn btn-primary"><i class="fa fa-search"></i>搜索</button>\n' +

@@ -98,7 +98,7 @@ body {
     position: fixed;
     right: 0vw;
     border: 0vw;
-    background: url('https://www.delac.io/wow/img/wow-11.gif') no-repeat;
+    background: url('../img/w1.gif') no-repeat;
     transition: .3s all;    
 }
 .box4 .dog2 {
@@ -107,7 +107,7 @@ body {
     position: fixed;
     right: 0vw;
     border: 0vw;
-    background: url('https://www.delac.io/wow/img/grumpy.gif') no-repeat;
+    background: url('../img/w2.gif') no-repeat;
     transition: .4s all;
 }
 .box4 .dog3 {
@@ -116,7 +116,7 @@ body {
     position: fixed;
     right: 0vw;
     border: 0vw;
-    background: url('https://www.delac.io/wow/img/wow-9.gif') no-repeat;
+    background: url('../img/w3.gif') no-repeat;
     transition: .5s all;
 }
 .box4:hover .dog1 {
